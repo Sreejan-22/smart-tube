@@ -1,0 +1,65 @@
+.header-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo-x {
+  color: #ee1520;
+}
+
+.logo-flix {
+  color: #e1e4e8;
+}
+
+/* .searchbar {
+    width: 50%;
+} */
+
+.search-box {
+  background-color: #121212;
+  border: 1px solid #444d56;
+  border-radius: 2px 0px 0px 2px;
+  color: rgba(255, 255, 255, 0.8);
+  width: 25rem;
+}
+
+.search-box ::placeholder {
+  padding-left: 1rem;
+  color: #606060;
+}
+
+.search-box:focus {
+  outline: none;
+}
+
+.search-btn {
+  background-color: #313131;
+  color: #606060;
+  border: 1px solid #444d56;
+  border-radius: 2px 0px 0px 2px;
+  width: 4rem;
+}
+
+.upload-btn {
+  margin-right: 1rem;
+  background-color: #4ca3fc;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.upload-icon {
+  padding: 0.5rem;
+}
+
+.upload-text {
+  padding: 0.5rem;
+  font-weight: 300;
+}

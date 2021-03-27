@@ -1,0 +1,65 @@
+/* .genre-panel {
+    background-color: #202020;
+} */
+
+.genre {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 20%;
+  margin-right: 8%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.specific-age {
+  padding: 0.5rem 1rem;
+}
+
+.age-group {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 17%;
+  margin-right: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.genre-text,
+.age-group-text {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.genre-selected,
+.age-group-selected {
+  background-color: white;
+  border-radius: 16px;
+  color: black;
+}
+
+.sort-dropdown {
+  margin-left: 1rem;
+  /* cursor: pointer; */
+}
+
+.sort-by-option {
+  margin-top: 4px;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.87);
+  /* padding: 0.5rem; */
+}
+
+.sort-by-option :hover {
+  background-color: #424242;
+}
+
+select {
+  outline: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
