@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./GenrePanel.css";
 
 export default function GenrePanel() {
@@ -7,7 +8,8 @@ export default function GenrePanel() {
   //   const target = e.target;
   //   target.classList
   // }
-
+  const [currentGenre, setGenre] = useState("All");
+  const [currentAgeGroup, setAgeGroup] = useState("Any");
   return (
     <div className="genre-panel">
       <div className="genre">

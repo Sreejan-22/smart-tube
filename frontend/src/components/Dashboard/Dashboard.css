@@ -1,8 +1,57 @@
 .dashboard {
   background-color: #181818;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+}
+
+.video-tile-link {
+  text-decoration: none;
 }
 
 .video-tile {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
+
+.video-title {
+  text-decoration: none;
+  color: white;
+}
+
+.date-posted {
+  text-decoration: none;
+  color: #d1d5da;
+  font-size: 0.8rem;
+}
+
+/* the styles written above are for extra large devices i.e. screen width >= 1200px */
+
+/* large devices */
+/* @media only screen and (max-width: 1200px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+/* small devices */
+/* @media only screen and (min-width: 992px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
+
+/* extra small devices */
+/* @media only screen and (max-width: 660px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+} */
