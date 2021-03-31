@@ -43,14 +43,6 @@ export default function GenrePanel(props) {
       ageGroup = [0, 0, 0, 0, 0];
       ageGroup[index] = 1;
     } else {
-      // ageGroup[index] = 0;
-      // let flag = false;
-      // for(let i=1;i<ageGroup.length;i++) {
-      //   flag = flag || ageGroup[i];
-      // }
-      // if(!flag) {
-      //   ageGroup = [1, 0, 0, 0, 0];
-      // }
       ageGroup = [1, 0, 0, 0, 0];
     }
     props.onAgeGroupChange(ageGroup);

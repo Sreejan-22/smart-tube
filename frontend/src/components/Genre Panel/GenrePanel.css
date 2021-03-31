@@ -44,11 +44,16 @@
   /* cursor: pointer; */
 }
 
+#sort-by {
+  cursor: pointer;
+}
+
 .sort-by-option {
   margin-top: 4px;
   background-color: black;
   color: rgba(255, 255, 255, 0.87);
   /* padding: 0.5rem; */
+  cursor: pointer;
 }
 
 .sort-by-option :hover {

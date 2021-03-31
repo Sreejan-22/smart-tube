@@ -25,7 +25,7 @@ function App() {
         onGenreChange={handleFilterByGenre}
         onAgeGroupChange={handleFilterByAge}
       />
-      <Dashboard />
+      <Dashboard genre={currentGenre} ageGroup={currentAgeGroup} />
     </>
   );
 }

@@ -5,7 +5,10 @@ import "./Dashboard.css";
 
 // https://6d1168da-9431-459f-b5f8-83f0375c86a3.mock.pstmn.io/v1/videos
 
-export default function Dashboard() {
+const genres = ["All Genre", "Education", "Sports", "Comedy", "Lifestyle"];
+const ageGroups = ["Any", "7+", "12+", "16+", "18+"];
+
+export default function Dashboard(props) {
   const [videos, setVideos] = useState([]);
 
   function timePosted(timeString) {
@@ -38,10 +41,59 @@ export default function Dashboard() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setVideos(data.videos);
+        let allVideos = data.videos;
+        const genreArr = [...props.genre];
+        const ageGroupArr = [...props.ageGroup];
+        // no filters at all
+        if (genreArr[0] === 1 && ageGroupArr[0] === 1) {
+          setVideos(allVideos);
+          return;
+        }
+
+        // only genre filter
+        const genreFilter = genres.map((item, index) => {
+          return genreArr[index] ? item : "";
+        });
+        if (ageGroupArr[0] === 1) {
+          const videosToBeDisplayed = allVideos.filter((item) => {
+            return (
+              item.genre ===
+              (genreFilter[0] ||
+                genreFilter[1] ||
+                genreFilter[2] ||
+                genreFilter[3] ||
+                genreFilter[4])
+            );
+          });
+          setVideos(videosToBeDisplayed);
+          return;
+        }
+
+        // only age group(i.e. content rating) filter
+        const ageGroupFilter = ageGroups[ageGroupArr.indexOf(1)];
+        if (genreArr[0] === 1) {
+          const videosToBeDisplayed = allVideos.filter(
+            (item) => item.contentRating === ageGroupFilter
+          );
+          setVideos(videosToBeDisplayed);
+          return;
+        }
+
+        // both genre and age group(i.e. content rating) filters present
+        const videosToBeDisplayed = allVideos.filter((item) => {
+          return (
+            (item.genre === genreFilter[0] ||
+              item.genre === genreFilter[1] ||
+              item.genre === genreFilter[2] ||
+              item.genre === genreFilter[3] ||
+              item.genre === genreFilter[4]) &&
+            item.contentRating === ageGroupFilter
+          );
+        });
+        setVideos(videosToBeDisplayed);
       })
       .catch((err) => console.log(err));
-  }, [videos]);
+  }, [videos, props.genre, props.ageGroup]);
 
   return (
     <div className="dashboard">
