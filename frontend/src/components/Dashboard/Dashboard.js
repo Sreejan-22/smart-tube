@@ -42,6 +42,18 @@ export default function Dashboard(props) {
       .then((res) => res.json())
       .then((data) => {
         let allVideos = data.videos;
+
+        // handling search in searchbar in the header section
+        const keyword = props.searchKeyword;
+        if (keyword.length > 0) {
+          const videosToBeDisplayed = allVideos.filter((item) => {
+            return item.title.toLowerCase().includes(keyword);
+          });
+          setVideos(videosToBeDisplayed);
+          return;
+        }
+
+        // handling filters
         const genreArr = [...props.genre];
         const ageGroupArr = [...props.ageGroup];
         // no filters at all
@@ -93,7 +105,7 @@ export default function Dashboard(props) {
         setVideos(videosToBeDisplayed);
       })
       .catch((err) => console.log(err));
-  }, [videos, props.genre, props.ageGroup]);
+  }, [videos, props.genre, props.ageGroup, props.searchKeyword]);
 
   return (
     <div className="dashboard">

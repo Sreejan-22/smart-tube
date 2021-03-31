@@ -1,6 +1,9 @@
 import "./Header.css";
 
-export default function Header() {
+export default function Header(props) {
+  function handleSeach(e) {
+    props.onSearch(e.target.value);
+  }
   return (
     <div className="header-component">
       <a href="" className="logo" style={{ textDecoration: "none" }}>
@@ -8,7 +11,12 @@ export default function Header() {
         <span className="logo-flix">Flix</span>
       </a>
       <form className="searchbar">
-        <input type="text" placeholder="Search" className="search-box" />
+        <input
+          type="text"
+          placeholder="Search"
+          className="search-box"
+          onChange={handleSeach}
+        />
         <button className="search-btn" type="button">
           <i className="fas fa-search"></i>
         </button>

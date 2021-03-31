@@ -7,6 +7,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 function App() {
   const [currentGenre, setGenre] = useState([1, 0, 0, 0, 0]);
   const [currentAgeGroup, setAgeGroup] = useState([1, 0, 0, 0, 0]);
+  const [searchKeyword, setSearchKeyword] = useState("");
 
   function handleFilterByGenre(data) {
     setGenre(data);
@@ -16,16 +17,24 @@ function App() {
     setAgeGroup(data);
   }
 
+  function onSearch(keyword) {
+    setSearchKeyword(keyword);
+  }
+
   return (
     <>
-      <Header />
+      <Header onSearch={onSearch} />
       <GenrePanel
         genre={currentGenre}
         ageGroup={currentAgeGroup}
         onGenreChange={handleFilterByGenre}
         onAgeGroupChange={handleFilterByAge}
       />
-      <Dashboard genre={currentGenre} ageGroup={currentAgeGroup} />
+      <Dashboard
+        genre={currentGenre}
+        ageGroup={currentAgeGroup}
+        searchKeyword={searchKeyword}
+      />
     </>
   );
 }
