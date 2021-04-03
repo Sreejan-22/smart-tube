@@ -8,13 +8,14 @@ export default function GenrePanel(props) {
   function handleClickAllGenre(e) {
     e.preventDefault();
     props.onGenreChange([1, 0, 0, 0, 0]);
+    return;
   }
 
   function handleClickOneGenre(e) {
     e.preventDefault();
     const target = e.target;
     const index = parseInt(target.id[0]);
-    genre[index] = Number(!genre[index]);
+    genre[index] = genre[index] === 1 ? 0 : 1;
 
     // check whether after clicking the button all specific genres are unselected
     let flag = false;
@@ -24,14 +25,17 @@ export default function GenrePanel(props) {
     if (flag) {
       genre[0] = 0;
       props.onGenreChange(genre);
+      return;
     } else {
       props.onGenreChange([1, 0, 0, 0, 0]);
+      return;
     }
   }
 
   function handleClickAllAges(e) {
     e.preventDefault();
     props.onAgeGroupChange([1, 0, 0, 0, 0]);
+    return;
   }
 
   function handleClickOneAge(e) {
@@ -46,6 +50,12 @@ export default function GenrePanel(props) {
       ageGroup = [1, 0, 0, 0, 0];
     }
     props.onAgeGroupChange(ageGroup);
+    return;
+  }
+
+  function handleSort(e) {
+    props.onSort(e.target.value);
+    return;
   }
 
   return (
@@ -101,7 +111,12 @@ export default function GenrePanel(props) {
           <i className="fas fa-long-arrow-alt-down"></i>
           <span style={{ paddingLeft: "8px" }}>
             Sort By:{" "}
-            <select name="options" id="sort-by" defaultValue="uploaded-date">
+            <select
+              name="options"
+              id="sort-by"
+              defaultValue="uploaded-date"
+              onChange={handleSort}
+            >
               <option value="views" className="sort-by-option">
                 Views
               </option>
