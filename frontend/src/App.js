@@ -7,7 +7,6 @@ import Dashboard from "./components/Dashboard/Dashboard";
 function App() {
   const [videos, setVideos] = useState([]);
   const allVideos = useRef([]);
-  const filteredVideos = useRef([]);
   const tempVideos = useRef([]);
 
   useEffect(() => {
@@ -19,7 +18,6 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        filteredVideos.current = data.videos;
         allVideos.current = data.videos;
         tempVideos.current = data.videos;
         setVideos(data.videos);
@@ -35,7 +33,6 @@ function App() {
       tempVideos.current = tempVideos.current.sort((a, b) => {
         return new Date(b.releaseDate) - new Date(a.releaseDate);
       });
-      // tempVideos.current = videosToBeDisplayed;
       setVideos(videosToBeDisplayed);
       // return;
     } else if (sortFactor === "views") {
@@ -45,7 +42,6 @@ function App() {
       tempVideos.current = tempVideos.current.sort((a, b) => {
         return new Date(b.releaseDate) - new Date(a.releaseDate);
       });
-      // tempVideos.current = videosToBeDisplayed;
       setVideos(videosToBeDisplayed);
       // return;
     }
@@ -59,7 +55,6 @@ function App() {
   function handleFilter(genre, ageGroup) {
     const genreArr = [...genre];
     const ageGroupArr = [...ageGroup];
-    // const currentVideos = [...videos];
 
     const genreFilter = genres.map((item, index) => {
       return genreArr[index] ? item : "";
@@ -68,7 +63,6 @@ function App() {
 
     // no filters at all
     if (genreArr[0] === 1 && ageGroupArr[0] === 1) {
-      filteredVideos.current = tempVideos.current;
       setVideos(tempVideos.current);
     } else if (ageGroupArr[0] === 1) {
       // only genre filter
@@ -81,14 +75,12 @@ function App() {
           item.genre === genreFilter[4]
         );
       });
-      filteredVideos.current = videosToBeDisplayed;
       setVideos(videosToBeDisplayed);
     } else if (genreArr[0] === 1) {
       // only age group(i.e. content rating) filter
       const videosToBeDisplayed = tempVideos.current.filter(
         (item) => item.contentRating === ageGroupFilter
       );
-      filteredVideos.current = videosToBeDisplayed;
       setVideos(videosToBeDisplayed);
     } else if (genreArr[0] !== 1 && ageGroupArr[0] !== 1) {
       // both genre and age group(i.e. content rating) filters present
@@ -118,9 +110,7 @@ function App() {
   }
 
   function onSearch(keyword) {
-    // setSearchKeyword(keyword);
     if (keyword.length > 0) {
-      // const currentVideos = allVideos.current;
       const videosToBeDisplayed = allVideos.current.filter((item) => {
         return item.title.toLowerCase().includes(keyword);
       });
