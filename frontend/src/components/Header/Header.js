@@ -1,8 +1,14 @@
 import "./Header.css";
 
+/*
+
+style="height:60%; display: flex; justify-content: center; align-items: center; margin-top:2rem; margin-bottom: 2rem"
+ */
+
 export default function Header(props) {
   function handleSeach(e) {
-    props.onSearch(e.target.value);
+    e.preventDefault();
+    props.onSearch(document.querySelector("#videoSearch").value);
   }
   return (
     <div className="header-component">
@@ -15,9 +21,9 @@ export default function Header(props) {
           type="text"
           placeholder="Search"
           className="search-box"
-          onChange={handleSeach}
+          id="videoSearch"
         />
-        <button className="search-btn" type="button">
+        <button className="search-btn" type="submit" onClick={handleSeach}>
           <i className="fas fa-search"></i>
         </button>
       </form>
