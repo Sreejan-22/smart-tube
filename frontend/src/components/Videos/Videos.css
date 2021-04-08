@@ -1,0 +1,17 @@
+/*
+style="height:60%; display: flex; justify-content: center; align-items: center; margin-top:2rem; margin-bottom: 2rem"
+ */
+
+.logo {
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo-x {
+  color: #ee1520;
+}
+
+.logo-flix {
+  color: #e1e4e8;
+}

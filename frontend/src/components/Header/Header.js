@@ -1,10 +1,5 @@
 import "./Header.css";
 
-/*
-
-style="height:60%; display: flex; justify-content: center; align-items: center; margin-top:2rem; margin-bottom: 2rem"
- */
-
 export default function Header(props) {
   function handleSeach(e) {
     e.preventDefault();
