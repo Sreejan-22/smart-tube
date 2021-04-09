@@ -69,9 +69,9 @@ function Videos() {
             </div>
             <div className="video-description">
               <div>
-                <div className="video-title">{currentVideo.current.title}</div>
+                <div className="videos-title">{currentVideo.current.title}</div>
                 <div className="rating-and-time-posted">
-                  {currentVideo.current.contentRating} &#x2022{" "}
+                  {currentVideo.current.contentRating} &#x2022;{" "}
                   {timePosted(currentVideo.current.releaseDate)}
                 </div>
               </div>
