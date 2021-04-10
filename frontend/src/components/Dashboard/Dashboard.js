@@ -28,10 +28,14 @@ function getId(url) {
 
 export default function Dashboard(props) {
   const videos = props.videos;
+  const loading = props.loading;
 
   return (
     <div className="dashboard">
-      {videos.length &&
+      {loading ? (
+        <h1 style={{ color: "white", textAlign: "center" }}>Loading...</h1>
+      ) : (
+        videos.length &&
         videos.map((video) => {
           return (
             <Link
@@ -49,7 +53,8 @@ export default function Dashboard(props) {
               </div>
             </Link>
           );
-        })}
+        })
+      )}
     </div>
   );
 }

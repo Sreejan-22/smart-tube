@@ -2,8 +2,24 @@
 style="height:60%; display: flex; justify-content: center; align-items: center; margin-top:2rem; margin-bottom: 2rem"
  */
 
+/* body {
+  height: 100vh;
+}
+
+#root {
+  height: 100vh;
+} */
+
+.full {
+  height: 100vh;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  margin: 1rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -16,6 +32,39 @@ style="height:60%; display: flex; justify-content: center; align-items: center; 
   color: #e1e4e8;
 }
 
+.video-section {
+  background-color: #181818;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-top: 3rem;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-description {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 1rem 3rem; */
+}
+
+.iframe-parent {
+  height: 70vh;
+  width: 100%;
+}
+
+.video-title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .videos-title {
   color: white;
   font-size: 1.5rem;
@@ -24,13 +73,66 @@ style="height:60%; display: flex; justify-content: center; align-items: center; 
 
 .rating-and-time-posted {
   color: #c2c2c2;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.votes {
+  display: flex;
+  align-items: center;
+}
+
+.like-button {
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.5rem;
+  background-color: #2e2e2e;
+  border-radius: 15px;
 }
 
 .thumbs-up {
   color: #797979;
 }
 
+.upvote {
+  color: white;
+}
+
+.dislike-button {
+  padding: 0.3rem 0.6rem;
+  margin-left: 0.5rem;
+  background-color: #2e2e2e;
+  border-radius: 15px;
+}
+
 .thumbs-down {
   color: #797979;
+}
+
+.downvote {
+  color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+  .iframe-parent {
+    height: 50vh;
+    width: 100%;
+  }
+  .video-section {
+    padding: 0;
+  }
+  .video-description {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .iframe-parent {
+    height: 30vh;
+    width: 100%;
+  }
+  /* .video-description {
+    margin: 0;
+  } */
+  .video-section {
+    padding: 0;
+  }
 }

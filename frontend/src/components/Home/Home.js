@@ -6,10 +6,12 @@ import Dashboard from "../Dashboard/Dashboard";
 
 function Home() {
   const [videos, setVideos] = useState([]);
+  const [loading, setLoading] = useState(false);
   const allVideos = useRef([]);
   const tempVideos = useRef([]);
 
   useEffect(() => {
+    setLoading(true);
     fetch("./data/db.json", {
       headers: {
         "Content-type": "application/json",
@@ -21,7 +23,9 @@ function Home() {
         allVideos.current = data.videos;
         tempVideos.current = data.videos;
         setVideos(data.videos);
-      });
+      })
+      .then(() => setLoading(false))
+      .catch((err) => console.log(err));
   }, []);
 
   function onSort(sortFactor) {
@@ -128,7 +132,7 @@ function Home() {
         onAgeGroupChange={handleFilterByAge}
         onSort={onSort}
       />
-      <Dashboard videos={videos} />
+      <Dashboard videos={videos} loading={loading} />
     </>
   );
 }
