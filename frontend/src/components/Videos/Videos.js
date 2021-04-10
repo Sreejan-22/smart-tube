@@ -7,6 +7,7 @@ function Videos() {
   const [loading, setLoading] = useState(false);
   const allVideos = useRef([]);
   const currentVideo = useRef({});
+  const videosToBeDisplayed = useRef([]);
   const videoId = window.location.pathname.split("/")[2];
 
   useEffect(() => {
@@ -25,7 +26,14 @@ function Videos() {
         currentVideo.current = videos.find((item) => {
           return item.videoLink === `youtube.com/embed/${videoId}`;
         });
-        // console.log(currentVideo.current.votes.upVotes);
+      })
+      .then(() => {
+        const temp = [...allVideos.current];
+        const index = temp.indexOf(currentVideo.current);
+        if (index > -1) {
+          temp.splice(index, 1);
+        }
+        videosToBeDisplayed.current = temp;
       })
       .then(() => setLoading(false))
       .catch((err) => console.log(err));
