@@ -5,6 +5,7 @@ export default function Header(props) {
     e.preventDefault();
     props.onSearch(document.querySelector("#videoSearch").value);
   }
+
   return (
     <div className="header-component">
       <a href="" className="logo" style={{ textDecoration: "none" }}>
@@ -22,7 +23,7 @@ export default function Header(props) {
           <i className="fas fa-search"></i>
         </button>
       </form>
-      <button className="upload-btn">
+      <button className="upload-btn" onClick={() => props.setModalShow(true)}>
         <i className="fas fa-upload upload-icon">
           <span className="upload-text">&nbsp;Upload</span>
         </i>

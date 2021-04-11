@@ -3,10 +3,12 @@ import "./Home.css";
 import Header from "../Header/Header";
 import GenrePanel from "../Genre Panel/GenrePanel";
 import Dashboard from "../Dashboard/Dashboard";
+import UploadModal from "../Modal/UploadModal";
 
 function Home() {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
   const allVideos = useRef([]);
   const tempVideos = useRef([]);
 
@@ -124,7 +126,11 @@ function Home() {
 
   return (
     <>
-      <Header onSearch={onSearch} />
+      <Header
+        onSearch={onSearch}
+        modalShow={modalShow}
+        setModalShow={setModalShow}
+      />
       <GenrePanel
         genre={currentGenre.current}
         ageGroup={currentAgeGroup.current}
@@ -133,6 +139,7 @@ function Home() {
         onSort={onSort}
       />
       <Dashboard videos={videos} loading={loading} />
+      <UploadModal show={modalShow} onHide={() => setModalShow(false)} />
     </>
   );
 }

@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "./Videos.css";
 import timePosted from "../../utils/timePosted";
 
+function getId(url) {
+  return url.split("/")[2];
+}
+
 function Videos() {
   const [loading, setLoading] = useState(false);
   const allVideos = useRef([]);
@@ -89,7 +93,34 @@ function Videos() {
                 </div>
               </div>
             </div>
-            <div className="other-videos"></div>
+            <hr className="separator" />
+            <div className="other-videos" style={{ padding: 0 }}>
+              {videosToBeDisplayed.current.length &&
+                videosToBeDisplayed.current.map((video) => {
+                  return (
+                    <>
+                      <a
+                        href={`/videos/${getId(video.videoLink)}`}
+                        className="video-tile-link"
+                        key={video["_id"]}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <div className="video-tile">
+                          <img
+                            src={video.previewImage}
+                            alt=""
+                            className="video-img"
+                          />
+                          <div className="video-title">{video.title}</div>
+                          <div className="date-posted">
+                            {timePosted(video.releaseDate)}
+                          </div>
+                        </div>
+                      </a>
+                    </>
+                  );
+                })}
+            </div>
           </div>
         </>
       )}
