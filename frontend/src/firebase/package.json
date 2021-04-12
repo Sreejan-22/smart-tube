@@ -1,0 +1,15 @@
+{
+  "name": "json_uploader",
+  "version": "1.0.0",
+  "description": "uploads json data to firestore",
+  "main": "uploader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sreejan",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^8.3.3",
+    "firebase-admin": "^9.6.0"
+  }
+}

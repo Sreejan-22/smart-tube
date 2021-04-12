@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "video-share-43588",
+  "private_key_id": "b7122c7bfa5c7faa01849d8355377e77532151b6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCuqwqEKqJtE+ta\nPZWrXfUtEOpuAKSVL5Zibdc/kdcluIunVQ0p2F3SyRXZHqKQaZ3T64ZmA9Fg36A2\n69B8oR9Zq9Q5PA6+q9LfByjW03k8Z+g4WB+Sep2vW2Bn0Wp/3QXE92Xwoe8sa39X\nOb33ygWZUFsGVC6OrObXBsndSkmh4vHNq0GdMpnT4YaRyVHnEK+EeQrA/rlI5D8U\nto2h5QNwonvwaQIEzzh8sXQpGIeUVGP7YX/mfpe6DY5BLWFUwh8plWT2jIPS8Asu\nKdY3J7ZB6Wl9UPhj9mBtUUYBWVrvIAuQH/LB4h0+N4ZeN1dCBE0NmzUSPX8TUR7o\nPA00wZlLAgMBAAECggEAFMGmokYevy+azEJ9QrwLoqtb8G6LIF9jU5cR+S/vjT/8\n+ImW4t4faCkVO5P0ZYzngIOAmSbi/swUUfJ7+BN9kj5lHdgROH9as746EC1ZPuBq\nLCfsuI9xpaEKN8wfB8rQILP1nT7hGTo9C7SE6qlLOQjfiEUAs1vAotTfsDhfv6jy\nIoGRakFX9zddg1vOWkxuvwzvEyhia1aEbDqh3UI64Iep0h371+hmZlbe1YMGPLoD\nEA/V13XBlFoeyDx9j4tjP0XC/qMn92BACgOcOPWBdXXSfYuBxb5Z1JN4+8CHzgge\n9vVxVgscC4O2Byvkla34MMz3CmZHWZR/1Fz6ajJ64QKBgQDaYr6Iro/O66Hg+X7Q\nbhcDYLA/TMiMzJIQC+5NjJBjP5904ODZpyWk1jHDzmrqK1q0cP/kyuLuH8VaUJxg\ntkaL3F2AD82f4gKUD6y+K1k2SRMRiaDeZ07RW+xSC0ckssBhU+/unlfXKtcMwM1c\nxRSklU29BakNce9qIpdtRURKnQKBgQDMwKmJVzTuIGoXoj2QZIDvegxwdrpDgSe4\n3wBTSJs6dp1xxHXyyiEFKa2regq2y3Lr0t2IddHMxWs0yFsqj7ms/DDZ1/LfYy4s\nwYpui0olrSA9SAkB4lqF5jmDCqoXQLcRvlf6S12AGwLOuNTAc6X3I1NkFZvhhzii\n/klIhokbBwKBgQDRnKW1G5f8zD58af1GoeSE4XFJ0LFOM6yeqlT5KkoMeSzcSlyH\njN+c79qkTqRgT2yodS2otPRMC0KqBWWTjmD4LXOxT3nWVGCVLNZpUcI3ULx0wN0f\nm5kTal/R//ExUEFHKgHJz0IQzJXNL+HtgVzm/Ee5fo1c0lcyUDF4OFvsIQKBgD3U\n5J27/xj2IvO2I99J6oHnGoCP6hnek+9JMKD16SKTlWI40OGb1rLnbjG9biTbdX3v\ntMSzx8KNz50l8Bn/QzQRCHOQuiBppBUR8UsGt0J/cJ/w8/9kqq+K4c1H2CujeGVc\nVNcaEUdRYNyqhl0Dz5e9TD6KJAPMQPc/0UOclSTbAoGASR5dMUoKWa4gwxWL40jn\nD/Mkc3mQHMD7oyyxhK9rVp6Gu9YDRCs+WoHCZ/xZEhdDHphJmyEIjBq2ZLoMzYmb\nWy5OOKvZ9ga1o/wjWRdS0QT4MZjMaDm3Nco8JgG1+vcBachVMVdhX/qWpLM17Lht\nWOlE3pN6LMbjzTCx6Qkez+A=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-ylclp@video-share-43588.iam.gserviceaccount.com",
+  "client_id": "104044509929308705572",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ylclp%40video-share-43588.iam.gserviceaccount.com"
+}
