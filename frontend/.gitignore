@@ -22,4 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/.vscode
+/src/firebase/files
+/src/firebase/node_modules
+/src/firebase/service_key.json
+/src/firebase/uploader.js
+
+/.env
