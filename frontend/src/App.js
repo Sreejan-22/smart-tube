@@ -8,15 +8,11 @@ export default function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/videos/:id">
-          <Videos />
-        </Route>
+        <Route exact path="/videos/:id" component={Videos} />
         <Route exact path="/videos">
           <Redirect to="/" />
         </Route>
-        <Route exact path="/">
-          <Home />
-        </Route>
+        <Route exact path="/" component={Home} />
       </Switch>
     </>
   );

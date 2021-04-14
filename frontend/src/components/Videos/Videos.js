@@ -41,11 +41,9 @@ function Videos() {
       })
       .then(() => setLoading(false))
       .catch((err) => console.log(err));
-  }, []);
+  }, [videoId]);
 
-  // <i class="fas fa-thumbs-up"></i>
   // <i class="far fa-thumbs-up"></i>
-  // <i class="fas fa-thumbs-down"></i>
   // <i class="far fa-thumbs-down"></i>
 
   return (
@@ -99,8 +97,8 @@ function Videos() {
                 videosToBeDisplayed.current.map((video) => {
                   return (
                     <>
-                      <a
-                        href={`/videos/${getId(video.videoLink)}`}
+                      <Link
+                        to={`/videos/${getId(video.videoLink)}`}
                         className="video-tile-link"
                         key={video["_id"]}
                         style={{ textDecoration: "none" }}
@@ -116,7 +114,7 @@ function Videos() {
                             {timePosted(video.releaseDate)}
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </>
                   );
                 })}
