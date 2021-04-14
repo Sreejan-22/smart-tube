@@ -1,3 +1,4 @@
+import db from "../../firebase/config";
 import { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import Header from "../Header/Header";
@@ -124,6 +125,8 @@ function Home() {
     }
   }
 
+  function handleSubmit(e) {}
+
   return (
     <>
       <Header
@@ -139,7 +142,11 @@ function Home() {
         onSort={onSort}
       />
       <Dashboard videos={videos} loading={loading} />
-      <UploadModal show={modalShow} onHide={() => setModalShow(false)} />
+      <UploadModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        onSubmit={handleSubmit}
+      />
     </>
   );
 }
