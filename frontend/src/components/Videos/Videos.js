@@ -16,15 +16,10 @@ function Videos() {
 
   useEffect(() => {
     setLoading(true);
-    fetch("/data/db.json", {
-      headers: {
-        "Content-type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    fetch("https://my-videos-api.herokuapp.com/videos")
       .then((res) => res.json())
       .then((data) => {
-        return (allVideos.current = data.videos);
+        return (allVideos.current = data);
       })
       .then((videos) => {
         currentVideo.current = videos.find((item) => {

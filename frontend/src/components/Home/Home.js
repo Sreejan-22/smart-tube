@@ -1,4 +1,3 @@
-import db from "../../firebase/config";
 import { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import Header from "../Header/Header";
@@ -15,17 +14,12 @@ function Home() {
 
   useEffect(() => {
     setLoading(true);
-    fetch("./data/db.json", {
-      headers: {
-        "Content-type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    fetch("https://my-videos-api.herokuapp.com/videos")
       .then((res) => res.json())
       .then((data) => {
-        allVideos.current = data.videos;
-        tempVideos.current = data.videos;
-        setVideos(data.videos);
+        allVideos.current = data;
+        tempVideos.current = data;
+        setVideos(data);
       })
       .then(() => setLoading(false))
       .catch((err) => console.log(err));

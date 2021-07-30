@@ -91,7 +91,7 @@ export default function UploadModal(props) {
               <option>Education</option>
               <option>Sports</option>
               <option>Comedy</option>
-              <option>Lifestyke</option>
+              <option>Lifestyle</option>
             </select>
             <small class="form-text text-muted">
               Genre will help in categorizing the videos
