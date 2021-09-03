@@ -118,10 +118,10 @@ export default function GenrePanel(props) {
               onChange={handleSort}
             >
               <option value="views" className="sort-by-option">
-                Views
+                View Count
               </option>
               <option value="uploaded-date" className="sort-by-option">
-                Uploaded Date
+                Release Date
               </option>
             </select>
           </span>

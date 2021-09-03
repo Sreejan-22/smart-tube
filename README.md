@@ -1,6 +1,6 @@
-# video sharing platform
+# video library
 
-A video sharing platform built using React.js in the frontend and Node.js(Express.js) at the backend(still in progress)
+A video library built using React.js in the frontend and Node.js(Express.js) at the backend(still in progress)
 
 ## Features
 
