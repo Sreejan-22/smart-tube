@@ -1,5 +1,5 @@
-// import { useState } from "react";
 import "./GenrePanel.css";
+// import FiltersModal from "../Modals/FiltersModal";
 
 export default function GenrePanel(props) {
   let genre = [...props.genre];

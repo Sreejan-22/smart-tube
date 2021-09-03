@@ -3,12 +3,13 @@ import "./Home.css";
 import Header from "../Header/Header";
 import GenrePanel from "../Genre Panel/GenrePanel";
 import Dashboard from "../Dashboard/Dashboard";
-import UploadModal from "../Modal/UploadModal";
+import UploadModal from "../Modals/UploadModal";
 
 function Home() {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [modalShow, setModalShow] = useState(false);
+  const [showFiltersModal, setShowFiltersModal] = useState(false);
   const allVideos = useRef([]);
   const tempVideos = useRef([]);
 
@@ -122,7 +123,7 @@ function Home() {
   function handleSubmit(e) {}
 
   return (
-    <>
+    <div className="home">
       <Header
         onSearch={onSearch}
         modalShow={modalShow}
@@ -134,6 +135,8 @@ function Home() {
         onGenreChange={handleFilterByGenre}
         onAgeGroupChange={handleFilterByAge}
         onSort={onSort}
+        showFiltersModal={showFiltersModal}
+        setShowFiltersModal={setShowFiltersModal}
       />
       <Dashboard videos={videos} loading={loading} />
       <UploadModal
@@ -141,7 +144,7 @@ function Home() {
         onHide={() => setModalShow(false)}
         onSubmit={handleSubmit}
       />
-    </>
+    </div>
   );
 }
 
