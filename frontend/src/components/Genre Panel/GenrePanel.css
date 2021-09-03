@@ -46,19 +46,20 @@
 
 #sort-by {
   cursor: pointer;
+  background-color: white;
 }
 
 .sort-by-option {
   margin-top: 4px;
-  background-color: black;
-  color: rgba(255, 255, 255, 0.87);
+  background-color: white;
+  /* color: rgba(255, 255, 255, 0.87); */
   /* padding: 0.5rem; */
   cursor: pointer;
 }
 
-.sort-by-option :hover {
+/* .sort-by-option :hover {
   background-color: #424242;
-}
+} */
 
 select {
   outline: none;

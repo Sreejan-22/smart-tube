@@ -8,9 +8,14 @@ export default function Header(props) {
 
   return (
     <div className="header-component">
-      <a href="" className="logo" style={{ textDecoration: "none" }}>
-        <span className="logo-x">X</span>
-        <span className="logo-flix">Flix</span>
+      <a
+        href=""
+        className="logo"
+        style={{ textDecoration: "none", color: "white" }}
+      >
+        {/* <span className="logo-x">X</span>
+        <span className="logo-flix">Flix</span> */}
+        <span>SmartTube</span>
       </a>
       <form className="searchbar">
         <input

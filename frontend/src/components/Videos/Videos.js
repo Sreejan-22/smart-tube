@@ -38,8 +38,8 @@ function Videos() {
       .catch((err) => console.log(err));
   }, [videoId]);
 
-  // <i class="far fa-thumbs-up"></i>
-  // <i class="far fa-thumbs-down"></i>
+  // <i className="far fa-thumbs-up"></i>
+  // <i className="far fa-thumbs-down"></i>
 
   return (
     <div className="full">
@@ -48,9 +48,12 @@ function Videos() {
       ) : (
         <>
           <div className="header-section">
-            <Link to="/" className="logo" style={{ textDecoration: "none" }}>
-              <span className="logo-x">X</span>
-              <span className="logo-flix">Flix</span>
+            <Link
+              to="/"
+              className="logo"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <span>SmartTube</span>
             </Link>
           </div>
           <div className="video-section">

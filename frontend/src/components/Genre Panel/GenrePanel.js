@@ -107,8 +107,6 @@ export default function GenrePanel(props) {
           Lifestyle
         </div>
         <div className="genre-text genre-selected sort-dropdown">
-          <i className="fas fa-long-arrow-alt-up"></i>
-          <i className="fas fa-long-arrow-alt-down"></i>
           <span style={{ paddingLeft: "8px" }}>
             Sort By:{" "}
             <select

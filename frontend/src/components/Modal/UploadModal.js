@@ -15,7 +15,7 @@ export default function UploadModal(props) {
       style={{ outline: "none", border: "none" }}
     >
       <div
-        class="modal-header"
+        className="modal-header"
         style={{
           background:
             "linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), #000000",
@@ -23,10 +23,10 @@ export default function UploadModal(props) {
           border: "none",
         }}
       >
-        <h5 class="modal-title">Upload Videos</h5>
+        <h5 className="modal-title">Upload Videos</h5>
         <button
           type="button"
-          class="close"
+          className="close"
           data-dismiss="modal"
           aria-label="Close"
           onClick={props.onHide}
@@ -85,23 +85,23 @@ export default function UploadModal(props) {
             </Form.Text>
           </Form.Group>
 
-          <div class="form-group">
+          <div className="form-group">
             <label for="genre-dropdown">Genre</label>
-            <select class="form-control" id="genre-dropdown">
+            <select className="form-control" id="genre-dropdown">
               <option>Education</option>
               <option>Sports</option>
               <option>Comedy</option>
               <option>Lifestyle</option>
             </select>
-            <small class="form-text text-muted">
+            <small className="form-text text-muted">
               Genre will help in categorizing the videos
             </small>
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
             <label for="genre-dropdown">Suitable age group for the clip</label>
             <select
-              class="form-control"
+              className="form-control"
               id="genre-dropdown"
               name="genre-dropdown"
             >
@@ -110,7 +110,7 @@ export default function UploadModal(props) {
               <option value="16+">16+</option>
               <option value="18+">18+</option>
             </select>
-            <small class="form-text text-muted">
+            <small className="form-text text-muted">
               This will be used to filter videos on age group suitability
             </small>
           </div>
@@ -129,12 +129,12 @@ export default function UploadModal(props) {
           border: "none",
         }}
       >
-        <button type="button" class="btn btn-danger">
+        <button type="button" className="btn btn-danger">
           Upload Video
         </button>
         <button
           type="button"
-          class="btn btn-link"
+          className="btn btn-link"
           onClick={props.onHide}
           style={{ color: "rgba(255, 255, 255, 0.6)", textDecoration: "none" }}
         >
